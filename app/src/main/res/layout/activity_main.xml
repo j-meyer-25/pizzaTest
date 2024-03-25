@@ -5,38 +5,80 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <EditText
-        android:id="@+id/smallPizzaDiameter"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter diameter of small pizza"
-        android:inputType="numberDecimal"/>
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <EditText
-        android:id="@+id/smallPizzaPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter price of small pizza"
-        android:inputType="numberDecimal"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/largePizzaDiameter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter diameter of large pizza"
-        android:inputType="numberDecimal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diameter of Small Pizza:"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
-    <EditText
-        android:id="@+id/largePizzaPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter price of large pizza"
-        android:inputType="numberDecimal"/>
+            <EditText
+                android:id="@+id/smallPizzaDiameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter diameter"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price of Small Pizza:"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/smallPizzaPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter price"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diameter of Large Pizza:"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/largePizzaDiameter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter diameter"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price of Large Pizza:"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/largePizzaPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter price"
+                android:inputType="numberDecimal"/>
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Calculate"/>
 
     <TextView
@@ -44,6 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:text="Cost per square inch will be displayed here."/>
 
 </LinearLayout>
