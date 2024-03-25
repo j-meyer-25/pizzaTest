@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/smallPizzaDiameter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter diameter of small pizza"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/smallPizzaPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter price of small pizza"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/largePizzaDiameter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter diameter of large pizza"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/largePizzaPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter price of large pizza"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"/>
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
