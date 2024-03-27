@@ -1,6 +1,7 @@
 package com.zybooks.pizzatest
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -26,6 +27,16 @@ class MainActivity : AppCompatActivity() {
         val pizzaImageView = findViewById<ImageView>(R.id.coolImage)
 
         calculateButton.setOnClickListener {
+            Log.d("TEST", smallPizzaDiameter.text.toString())
+            if (smallPizzaDiameter.text.toString() == ""
+                || largePizzaDiameter.text.toString() == ""
+                || smallPizzaPrice.text.toString() == ""
+                || largePizzaPrice.text.toString() == ""
+                ) {
+                resultTextView.text = "Please enter all fields."
+                return@setOnClickListener
+            }
+
             val smallPizzaArea = PI * (smallPizzaDiameter.text.toString().toDouble() / 2).pow(2)
             val largePizzaArea = PI * (largePizzaDiameter.text.toString().toDouble() / 2).pow(2)
 
