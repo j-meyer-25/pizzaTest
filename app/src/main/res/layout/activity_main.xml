@@ -71,13 +71,23 @@
                 android:hint="Enter price"
                 android:inputType="numberDecimal"/>
 
+            <ImageView
+                android:id="@+id/coolImage"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:rotation="0"
+                android:rotationX="25"
+                android:color="@color/awesome"
+                android:src="@drawable/super_pizza" />
+
         </LinearLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:textSize="33sp"
         android:layout_gravity="center"
         android:text="Calculate"/>
 
@@ -85,7 +95,7 @@
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="33sp"
         android:layout_marginTop="16dp"
         android:text="Cost per square inch will be displayed here."/>
 

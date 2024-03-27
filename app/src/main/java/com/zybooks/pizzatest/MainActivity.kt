@@ -3,10 +3,14 @@ package com.zybooks.pizzatest
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.PI
 import kotlin.math.pow
+
+const val TIME_WAIT : Long = 1000;
+const val ROT_INC = 10
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val largePizzaPrice = findViewById<EditText>(R.id.largePizzaPrice)
         val calculateButton = findViewById<Button>(R.id.calculateButton)
         val resultTextView = findViewById<TextView>(R.id.resultTextView)
+        val pizzaImageView = findViewById<ImageView>(R.id.coolImage)
 
         calculateButton.setOnClickListener {
             val smallPizzaArea = PI * (smallPizzaDiameter.text.toString().toDouble() / 2).pow(2)
@@ -34,6 +39,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             resultTextView.text = result
+
+            pizzaImageView.rotation += ROT_INC
         }
     }
 }
